@@ -32,7 +32,7 @@ public class HomeController {
 
     @PostMapping("/add")
     public String processAcctor(@ModelAttribute Actor actor,
-        @RequestParam("file") MultipartFile file {
+        @RequestParam("file")MultipartFile file) {
         if (file.isEmpty()){
             return "redirect:/add";
         }
@@ -48,5 +48,5 @@ public class HomeController {
         }
         return "redirect:/";
     }
-                                )
+
 }

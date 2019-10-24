@@ -3,7 +3,7 @@ package com.example.demo;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.Singleton;
 import com.cloudinary.Transformation;
-import com.sun.javafx.collections.MappingChange;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,7 @@ public class CloudinaryConfig {
         cloudinary.config.apiKey=key;
     }
 
-    public Map upload(Object file, MappingChange.Map options){
+    public Map upload(Object file, Map options){
         try{
             return cloudinary.uploader().upload(file, (Map) options);
         } catch (IOException e) {
